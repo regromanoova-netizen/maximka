@@ -1405,6 +1405,10 @@ body.secret-page .cover-action {
 }
 
 @media (max-width: 600px) {
+  html {
+    overflow-x: clip;
+  }
+
   body {
     overflow-x: hidden;
     font-size: 15px;
@@ -1418,6 +1422,7 @@ body.secret-page .cover-action {
 
   body.cover-page .cover-frame {
     width: 100%;
+    max-width: 100%;
     min-height: calc(100svh - 32px);
     padding: 24px 18px;
     border-radius: 20px;
@@ -1500,6 +1505,8 @@ body.secret-page .cover-action {
 
   .cover-grid,
   body.secret-page .cover-grid {
+    width: 100%;
+    max-width: 100%;
     grid-template-columns: 1fr;
     gap: 24px;
     min-width: 0;
@@ -1541,12 +1548,18 @@ body.secret-page .cover-action {
 
   .cover-frame h1 {
     width: 100%;
-    font-size: clamp(2.7rem, 15vw, 4rem);
-    letter-spacing: -0.09em;
+    max-width: 100%;
+    font-size: clamp(2.35rem, 13vw, 3.25rem);
+    line-height: 0.95;
+    letter-spacing: -0.08em;
+    overflow-wrap: anywhere;
   }
 
   body.secret-page h1 {
-    font-size: clamp(2rem, 11vw, 3.2rem);
+    font-size: clamp(1.65rem, 7.5vw, 2.5rem);
+    letter-spacing: -0.06em;
+    overflow-wrap: normal;
+    word-break: normal;
   }
 
   body.cover-page .image-block,
@@ -1554,17 +1567,23 @@ body.secret-page .cover-action {
     height: auto;
     min-height: 0;
     max-height: 56svh;
+    max-width: 100%;
   }
 
   body.secret-page .cover-frame {
     width: 100%;
+    max-width: 100%;
     margin-top: 54px;
     padding: 24px 18px;
     border-radius: 18px;
+    overflow: hidden;
   }
 
   body.secret-page .image-block {
+    width: 100%;
+    max-width: 100%;
     min-height: 0;
+    overflow: hidden;
   }
 
   body.secret-page .image-block img {
@@ -1572,6 +1591,15 @@ body.secret-page .cover-action {
     height: auto;
     max-width: 100%;
     max-height: 58svh;
+    object-fit: contain;
+  }
+
+  body.secret-page .image-note {
+    max-width: 100%;
+    padding-left: 8px;
+    font-size: 0.68rem;
+    line-height: 1.45;
+    letter-spacing: 0.12em;
   }
 
   .magazine-header {
