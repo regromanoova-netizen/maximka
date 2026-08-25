@@ -1510,6 +1510,35 @@ body.secret-page .cover-action {
     min-width: 0;
   }
 
+  .cover-frame,
+  .childhood-text,
+  .greetings-copy,
+  .file-summary,
+  .file-details,
+  .qa-card,
+  .note-copy,
+  .cover-story-text,
+  .archive-item,
+  .section-end {
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  .section img,
+  .cover-frame img,
+  .section video {
+    max-width: 100%;
+  }
+
+  .section p,
+  .section h1,
+  .section h3,
+  .cover-frame h1,
+  .image-note,
+  .brand-note {
+    overflow-wrap: anywhere;
+  }
+
   .cover-frame h1 {
     width: 100%;
     font-size: clamp(2.7rem, 15vw, 4rem);
