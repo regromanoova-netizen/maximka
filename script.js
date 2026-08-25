@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const lightboxPrev = document.querySelector('.lightbox-prev');
   const lightboxNext = document.querySelector('.lightbox-next');
   const lightboxMedia = document.querySelector('.lightbox-media');
-  const placeholders = document.querySelectorAll('.placeholder, img');
+  const placeholders = document.querySelectorAll('.placeholder:not(.greetings-video), img');
   const pageSections = Array.from(document.querySelectorAll('.section:not(.section-secret):not(.section-contents):not(#end)'));
 
   function updateProgress() {
