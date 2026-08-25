@@ -1418,19 +1418,102 @@ body.secret-page .cover-action {
 
   body.cover-page .cover-frame {
     width: 100%;
+    min-height: calc(100svh - 32px);
     padding: 24px 18px;
     border-radius: 20px;
     gap: 26px;
+    align-content: center;
+  }
+
+  body.cover-page:not(.secret-page) .cover-frame {
+    justify-content: center;
+  }
+
+  body.cover-page:not(.secret-page) .cover-meta {
+    text-align: center;
+    justify-items: center;
+  }
+
+  body.cover-page:not(.secret-page) .eyebrow {
+    max-width: 280px;
+    margin-bottom: 4px;
+    font-size: 0.72rem;
+    line-height: 1.5;
+    letter-spacing: 0.16em;
+  }
+
+  body.cover-page:not(.secret-page) .cover-subtitle {
+    margin: 10px 0 0;
+    font-size: 0.86rem;
+    letter-spacing: 0.18em;
+  }
+
+  body.cover-page:not(.secret-page) .cover-year {
+    font-size: 0.78rem;
+    letter-spacing: 0.2em;
+  }
+
+  body.cover-page:not(.secret-page) .cover-visual {
+    width: 100%;
+    gap: 12px;
+  }
+
+  body.cover-page:not(.secret-page) .image-block {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 16px;
+  }
+
+  body.cover-page:not(.secret-page) .image-block img {
+    width: 100%;
+    max-width: 100%;
+    height: min(48svh, 360px);
+    min-height: 220px;
+    object-fit: cover;
+    border-radius: 16px;
+  }
+
+  body.cover-page:not(.secret-page) .image-note {
+    max-width: 100%;
+    padding-left: 8px;
+    font-size: 0.68rem;
+    line-height: 1.45;
+    letter-spacing: 0.12em;
+    text-align: left;
+  }
+
+  body.cover-page:not(.secret-page) .cover-action {
+    width: 100%;
+    justify-self: stretch;
+    text-align: center;
+  }
+
+  body.cover-page:not(.secret-page) .balloons {
+    opacity: 0.62;
+    overflow: hidden;
+  }
+
+  body.cover-page:not(.secret-page) .balloon {
+    width: 44px;
+    height: 62px;
   }
 
   .cover-grid,
   body.secret-page .cover-grid {
     grid-template-columns: 1fr;
     gap: 24px;
+    min-width: 0;
+  }
+
+  .cover-meta,
+  .cover-visual {
+    min-width: 0;
   }
 
   .cover-frame h1 {
-    font-size: clamp(3.2rem, 18vw, 5.2rem);
+    width: 100%;
+    font-size: clamp(2.7rem, 15vw, 4rem);
+    letter-spacing: -0.09em;
   }
 
   body.secret-page h1 {
